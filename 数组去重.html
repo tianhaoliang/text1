@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            // var obj = {}, r =[] ;
+            // var ary = ["1","2","3","4","1","2",{"name":"小李"},{"name":"小李"},"123","123"];
+            // for(i=0; i<ary.length;i++) {
+            //     obj[ary[i]] = ary[i];
+            //     for(i in obj){
+            //         r.push(obj[i]);
+            //     }
+            // }
+            // return r;
+
+
+         var ary = ["1","2","3","4","1","2",{"name":"小李"},{"name":"小李"},"123","123"];
+        var fast_uniq = function(ary) {
+            var o = {}, i, r = [];
+            for(i=0; i<ary.length;i++) {
+                o[ary[i]] = ary[i];
+
+            }
+            for(j in o){
+                    r.push(o[j]);
+                    // console.log(r)
+                }
+            return r;
+        }
+          var p=fast_uniq(ary);
+          console.log(p);
+
+        </script>
+    </body>
+</html>
